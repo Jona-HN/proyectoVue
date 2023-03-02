@@ -21,6 +21,14 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "home" */ '@/views/SecondView.vue'),
+      },
+      {
+        path: 'crud',
+        name: 'Vista CRUD',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "home" */ '@/views/CrudView.vue'),
       }
     ],
   },
