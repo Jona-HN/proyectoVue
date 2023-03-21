@@ -3,6 +3,7 @@
     :headers="headers"
     :items="posts"
     :sort-by="[{ key: 'id', order: 'asc' }]"
+    :group-by="groupingKey"
     class="elevation-1"
     fixed-header>
 
@@ -126,6 +127,7 @@
 
   const posts = ref([]);
   const id = ref(0);
+  const groupingKey = ref([{ key: 'name' }]);
   const headers = ref([
     {
       title: 'Id',
